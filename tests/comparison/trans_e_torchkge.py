@@ -17,7 +17,7 @@ kg_train, _, _ = load_fb15k()
 # Define some hyper-parameters for training
 emb_dim = 1024
 lr = 0.0004
-n_epochs = 10
+n_epochs = 100
 b_size = 32768
 margin = 0.5
 
