@@ -14,7 +14,7 @@ from tqdm.auto import tqdm
 
 emb_dim = 1024
 lr = 0.0004
-n_epochs = 100
+n_epochs = 10
 b_size = 32768
 margin = 0.5
 
@@ -22,20 +22,20 @@ print(f'Running TransE Model for embedding size = {emb_dim}')
 print('Loading fb15k dataset...', end='')
 
 # # From TorchKGE
-# from torchkge.utils.datasets import load_fb15k
-# kg_train, _, _ = load_fb15k()
-# train_dataset = list(kg_train)
-# import pandas as pd
-# df = pd.DataFrame(train_dataset, columns=['from', 'to', 'rel'])
-# print('Done')
-# print('Converting to sparse dataset...', end='')
-# dataset_sparse = SparseKGDataset(df, batch_size=b_size, shuffle=False, drop_last=False, normalize=False)
-
-# From own source
-df = load_fb15k('train')
+from torchkge.utils.datasets import load_fb15k
+kg_train, _, _ = load_fb15k()
+train_dataset = list(kg_train)
+import pandas as pd
+df = pd.DataFrame(train_dataset, columns=['from', 'to', 'rel'])
 print('Done')
 print('Converting to sparse dataset...', end='')
-dataset_sparse = SparseKGDataset(df, batch_size=b_size, shuffle=False, drop_last=False, normalize=True)
+dataset_sparse = SparseKGDataset(df, batch_size=b_size, shuffle=False, drop_last=False, normalize=False)
+
+# From own source
+# df = load_fb15k('train')
+# print('Done')
+# print('Converting to sparse dataset...', end='')
+# dataset_sparse = SparseKGDataset(df, batch_size=b_size, shuffle=False, drop_last=False, normalize=True)
 
 
 dataloader_sparse = torch.utils.data.DataLoader(dataset_sparse,
