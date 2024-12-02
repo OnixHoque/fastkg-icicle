@@ -1,4 +1,4 @@
-# FastKG - A sparse implementation of translational KG embedding models
+# FastKG
 
 ## Installation
     
