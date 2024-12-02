@@ -11,7 +11,7 @@ To test fb15k dataset:
     python trans_e.py
 
 # Speedup Comparison
-FastKG uses SpMM implementation to speed up KG embedding trainining. The `./tests/comparison` compares the speedup with TorchKGE. To run comparison, do the following:
+The `./tests/comparison` compares the speedup with TorchKGE. To run comparison, do the following:
 
 1. `pip install torchkge`
 2. `cd ./tests/comparison`
