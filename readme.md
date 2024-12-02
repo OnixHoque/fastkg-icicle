@@ -17,5 +17,3 @@ FastKG uses SpMM implementation to speed up KG embedding trainining. The `./test
 2. `cd ./tests/comparison`
 3. `python trans_e_fastkg.py`
 4. `python trans_e_torchkge.py`
-
-Note: FastKG is typically 30% faster than TorchKGE with PyTorch SpMM. We observed up to 5x speedup when a high-performance SpMM such as iSpLib is used.
