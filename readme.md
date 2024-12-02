@@ -2,7 +2,7 @@
 
 ## Installation
     
-To install, first clone the repository and move into the folder. Then run: `pip install -e .`
+To install, first clone the repository and move into the folder `fastkg-icicle`. Then run: `pip install -e .`
 
 # CPU/GPU Testing
 To test fb15k dataset:
