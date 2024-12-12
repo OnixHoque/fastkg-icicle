@@ -43,5 +43,13 @@ The `model_sparse` in `./tests/trans_e.py` is a standard PyTorch model. It can b
     # Saving
     torch.save(model_sparse, "model.pth")
 
-    #Loading
+    # Loading
     model_sparse = torch.load("model.pth")
+
+
+# Evaluation
+
+To evaluate if a triplet is a probable KG candidate, use the `classify_triplet` function from the `model_sparse` when training is done.
+
+    # Append this after ./tests/trans_e.py
+    print(model_sparse(h_idx=0, r_idx=0, t_idx=1, threshold=2.0))
