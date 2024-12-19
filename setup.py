@@ -13,5 +13,5 @@ setup(
     python_requires='>=3.8',
     author='Md Saidul Hoque Anik',
     author_email='mdshoque@iu.edu',
-    description='An efficient sparse implementation of KG Translational Models',
+    description='An implementation of KG Translational Model',
 )
