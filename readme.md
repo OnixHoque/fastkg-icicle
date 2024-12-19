@@ -55,3 +55,6 @@ To evaluate if a triplet is a probable KG candidate, use the `classify_triplet` 
     print(model_sparse.classify_triplet(h_idx=0, r_idx=0, t_idx=1, threshold=1.5))
 
 This checks if the 1st entity, the 1st relation, and the 2nd entity make up a plaussible triplet for the KG or not. The threshold is typicall the loss margin used in training (1.5).
+
+# Acknowledgements
+*This work has been funded by grants from the National Science Foundation, including the ICICLE AI Institute (OAC 2112606)*
